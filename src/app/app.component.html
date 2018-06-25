@@ -1,0 +1,46 @@
+
+
+
+<mat-toolbar color="primary">
+  <span>Welcome to {{title}}!</span>
+</mat-toolbar>
+
+
+<div class="container">
+  <br>
+  <h2>Contact List</h2>  
+  <span class="right"><a href="https://address-book-demo.herokuapp.com/api/contacts" title="Contacts API End Point">API endpoint</a></span>        
+  <table class="table  table-hover">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Location</th>
+        <th>Role</th>
+        <th>Company</th>
+        <th>Info</th>
+        <th>Email</th>
+        <th>Twitter</th>
+        <!--<th>Image</th>-->
+      </tr>
+    </thead>
+    <tbody>
+      <ng-container *ngFor="let contact of data.contacts">
+      <tr>
+        <td>{{contact.name }}</td>
+        <td>{{contact.location }}</td>
+        <td>{{contact.role }}</td>
+        <td>{{contact.company }}</td>
+        <td>{{contact.info }}</td>
+        <td>{{contact.email }}</td>
+        <td>{{contact.twitter }}</td>
+        <!--<td><img class="image-width" src="{{contact.image}}" alt="{{contact.name}}}"></td>-->
+        
+      </tr>
+    </ng-container>
+    </tbody>
+  </table>
+</div>
+
+
+
+
